@@ -1,23 +1,33 @@
-import logo from './logo.svg';
+import { useEffect, useState } from 'react';
 import './App.css';
+import ClipLoader from "react-spinners/ClipLoader";
 
 function App() {
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+   setLoading(true)
+   setTimeout(()=>{
+    setLoading(false)
+   },3000)
+
+  }, [])
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {
+        loading ?
+        <ClipLoader
+        color={'#D0021B'}
+        loading={loading}
+        
+        size={100}
+        aria-label="Loading Spinner"
+        data-testid="loader"
+      />
+        :
+        <img src="https://c.tenor.com/32nHeCvxlwEAAAAM/you-tube-like-and-subscribe.gif" alt="img" />
+      }
     </div>
   );
 }
