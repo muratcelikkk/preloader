@@ -1,3 +1,4 @@
+![chrome-capture-2023-5-6](https://github.com/muratcelikkk/preloader/assets/113663079/0c6a5be8-c0d0-4487-a103-87e39c80ff71)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
